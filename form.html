@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário com autenticação simples</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./estilo.css" />
+  </head>
+  <body>
+    <div class="tela">
+      <div class="parte-esquerda">
+        <div>
+          <img src="./odin-lined.png" alt="" />
+          <h1>Sign up form</h1>
+        </div>
+        <p>Unsplash Photo</p>
+      </div>
+      <div class="parte-direita">
+        <div class="header-texto">
+          <p>
+            This is not a real online service! you know you need something lie
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p>you <em>know</em> you want to.</p>
+        </div>
+        <div class="form">
+          <form id="meu-form">
+            <div id="nome">
+              <label for="primeiro-nome">
+                Nome
+                <input
+                  id="primeiro-nome"
+                  name="primeiro-nome"
+                  type="text"
+                  required
+                />
+                <div id="nome-erro" class="erro"></div>
+              </label>
+            </div>
+            <div>
+              <label for="email">
+                Email
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="off"
+                />
+                <div id="email-erro" class="erro"></div>
+              </label>
+            </div>
+            <div>
+              <label for="sobrenome">
+                Sobrenome
+                <input id="sobrenome" name="sobrenome" type="text" required />
+                <div id="sobrenome-erro" class="erro"></div>
+              </label>
+            </div>
+
+            <div>
+              <label for="telefone"
+                >Telefone
+                <input
+                  id="telefone"
+                  name="telefone"
+                  pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+                  type="tel"
+                  required
+                />
+                <div id="telefone-erro" class="erro"></div>
+              </label>
+            </div>
+            <div>
+              <label for="senha">
+                Senha
+                <input
+                  id="senha"
+                  name="senha"
+                  type="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required
+                />
+                <div id="senha-erro" class="erro"></div>
+              </label>
+            </div>
+            <div>
+              <label for="confirmar-senha"
+                >Confirm Password
+                <input
+                  id="confirmar-senha"
+                  name="confirmar-senha"
+                  type="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required
+                />
+                <div id="confirmar-senha-erro" class="erro"></div>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="submit-space">
+          <button type="submit" form="meu-form">Criar Conta</button>
+          <p>Já possui uma conta? <a href="google.com">Entrar</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
